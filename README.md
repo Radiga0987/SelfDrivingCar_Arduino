@@ -10,4 +10,6 @@ Using an Arduino Uno and a motor driver(L239D) and some libraries in Arduino, I 
 6) Sliding switch (1 or 2 based on requirement and usage)
 7) LED (1 to 2)
 8) Rechargeable Li-ion batteries (x2, 3.7 Volts)
+9) Wheels (x4)
+10) Wood base
 
