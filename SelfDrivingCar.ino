@@ -44,8 +44,8 @@ void loop() {
  int Distance_left =  0;
  delay(40);
  
- /*If distance in front is less than 17, we stop, move back a little and check right and left for object distances*/
- if(distance<=17) 
+ /*If distance in front is less than 20, we stop, move back a little and check right and left for object distances*/
+ if(distance<=20) 
  {
   Stop();
   delay(80);
@@ -77,7 +77,7 @@ void loop() {
 
 /*This function is used to obtain the distance of the objects in front*/
 int readPing() { 
-  delay(70);
+  delay(80);
   int cm = sonar.ping_cm();
   if(cm==0)
   {
@@ -127,7 +127,7 @@ void move_forward() {
     motor2.run(FORWARD);
     motor3.run(FORWARD); 
     motor4.run(FORWARD);     
-   for (spd = 0; spd < MAXSPEED ; spd +=2) // slowly increase speed to preventing battery from loading up
+   for (spd = 0; spd < MAXSPEED ; spd +=1) // slowly increase speed to preventing battery from loading up
    {
     motor1.setSpeed(spd);
     motor2.setSpeed(spd);
@@ -145,7 +145,7 @@ void move_backward() {
     motor2.run(BACKWARD);
     motor3.run(BACKWARD);
     motor4.run(BACKWARD);  
-  for (spd = 0; spd < REVERSE_MAXSPEED; spd +=2) // slowly increase speed to preventing battery from loading up
+  for (spd = 0; spd < REVERSE_MAXSPEED; spd +=1) // slowly increase speed to preventing battery from loading up
   {
     motor1.setSpeed(spd);
     motor2.setSpeed(spd);
